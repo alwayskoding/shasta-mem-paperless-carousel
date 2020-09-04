@@ -51,6 +51,13 @@
   background-size: contain;
 }
 
+.outer-wrapper .swiper-container .swiper-wrapper .swiper-slide a {
+  display: block;
+  width: 55%;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .outer-wrapper .swiper-container .swiper-wrapper .swiper-text-overlay-container {
   display: -webkit-box;
   display: -ms-flexbox;

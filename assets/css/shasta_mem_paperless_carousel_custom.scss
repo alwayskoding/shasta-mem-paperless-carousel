@@ -33,6 +33,13 @@
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: contain;
+
+                a {
+                    display: block;
+                    width: 55%;
+                    height: 100%;
+                    margin: 0 auto;
+                }
             }
 
             .swiper-text-overlay-container {
