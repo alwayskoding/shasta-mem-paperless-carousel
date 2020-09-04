@@ -6,10 +6,10 @@
         noSwiping: true, //set to false if want slide functionality
         allowSlidePrev: true, //set to true if want to slide
         allowSlideNext: true, //set to true if want to slide
-        autoplay: {
+        /* autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-        },
+        }, */
 
         // If we need pagination uncomment this method
         pagination: {

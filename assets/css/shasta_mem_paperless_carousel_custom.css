@@ -1,3 +1,12 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* === CAROUSEL CODE BEGINS HERE === */
 .outer-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,41 +26,13 @@
   width: 100%;
   color: #ffffff;
   font-family: sans-serif;
-  /* 950 */
-  /* @include respond(small-laptop) {
-            width: 100%;
-        } */
-  /* 600 */
-  /* @include respond(tablet-mobile) {
-            width: 100%;
-        }
-     */
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .outer-wrapper .swiper-container .swiper-wrapper {
   width: 100%;
   height: 100%;
-  /* .swiper-slide-active:before {
-    
-                @include respond(tablet-mobile) {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background: inherit;
-    
-                    filter: blur(10px);
-                    -moz-filter: blur(10px);
-                    -webkit-filter: blur(10px);
-                    -o-filter: blur(10px);
-    
-                    transition: all 2s linear;
-                    -moz-transition: all 2s linear;
-                    -webkit-transition: all 2s linear;
-                    -o-transition: all 2s linear;
-                }
-    
-            } */
 }
 
 .outer-wrapper .swiper-container .swiper-wrapper .swiper-slide {
@@ -65,10 +46,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-position: center;
-  /* @include respond(tablet-mobile) {
-                    align-items: center;
-                } */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .outer-wrapper .swiper-container .swiper-wrapper .swiper-text-overlay-container {
@@ -88,15 +68,6 @@
   width: 30vw;
   padding: 0 10px;
   margin-left: 24px;
-  /* @include respond(small-laptop) {
-                    width: 45vw;
-                }
-    
-                @include respond(tablet-mobile) {
-                    width: 80vw;
-                    position: absolute;
-    
-                } */
 }
 
 .outer-wrapper .swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-text-overlay {
@@ -104,51 +75,10 @@
   line-height: 32px;
   text-align: center;
   color: #424242;
-  /* 1100px */
-  /* @include respond(large-laptop) {
-                        font-size: 1.3rem;
-                    }
-    
-                    @include respond(small-laptop) {
-                        font-size: 1.15rem;
-                    }
-    
-                    @include respond(tablet-mobile) {
-                        font-size: 1.1rem;
-                        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
-                    } */
 }
 
-.outer-wrapper .swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-cta-btn {
-  width: 311px;
-  height: 40px;
-  border-radius: 24px;
-  border: #481F5D;
-  font-weight: 500;
-  color: #ffffff;
-  margin-top: 20px;
-}
-
-.outer-wrapper .swiper-container .swiper-pagination {
-  border-radius: 14.5px;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 63px !important;
-  height: 29px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* Custom Pagination Bullet Styles -- Overrides Pagination Positioning */
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  left: 88% !important;
+.outer-wrapper .swiper-container .controls-container .swiper-button-prev,
+.outer-wrapper .swiper-container .controls-container .swiper-button-next {
+  color: rgba(9, 30, 66, 0.15);
 }
 /*# sourceMappingURL=shasta_mem_paperless_carousel_custom.css.map */

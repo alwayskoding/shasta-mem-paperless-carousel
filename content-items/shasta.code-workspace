@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../sendero-member-portal-phase1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "shasta-member-paperless-carousel"
+	}
+}
