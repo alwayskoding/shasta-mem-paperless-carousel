@@ -48,22 +48,21 @@
 /* === Add Custom Data Attributes In Markup and Slide Images Below === */
 [data-slide-1] {
     background: url("../img/shasta_member_home_page_resized.jpg");
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-
 }
 
 [data-slide-2] {
     background: url("../img/shasta_paperless_resized.png");
+}
+
+/* === Add Slide Data Attribute Here As Well === */
+[data-slide-1], [data-slide-2] {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+
+
 }
+
