@@ -8,7 +8,6 @@
 /* === CAROUSEL CODE BEGINS HERE === */
 
 .outer-wrapper {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,13 +26,6 @@
             height: 100%;
 
             .swiper-slide {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: contain;
-
                 a {
                     display: block;
                     width: 55%;
@@ -41,35 +33,37 @@
                     margin: 0 auto;
                 }
             }
-
-            .swiper-text-overlay-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 30vw;
-                padding: 0 10px;
-                margin-left: 24px;
-
-                .swiper-slide-text-overlay {
-                    letter-spacing: 0;
-                    line-height: 32px;
-                    text-align: center;
-                    color: #424242;
-                }
-            }
-
-
         }
 
         .controls-container {
-            
+
             .swiper-button-prev,
             .swiper-button-next {
                 color: rgba(9, 30, 66, .15)
             }
         }
-
-
     }
+}
+
+/* === Add Custom Data Attributes In Markup and Slide Images Below === */
+[data-slide-1] {
+    background: url("../img/shasta_member_home_page_resized.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+}
+
+[data-slide-2] {
+    background: url("../img/shasta_paperless_resized.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

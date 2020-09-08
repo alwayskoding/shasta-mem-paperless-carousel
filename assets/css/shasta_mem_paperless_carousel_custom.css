@@ -35,7 +35,21 @@
   height: 100%;
 }
 
-.outer-wrapper .swiper-container .swiper-wrapper .swiper-slide {
+.outer-wrapper .swiper-container .swiper-wrapper .swiper-slide a {
+  display: block;
+  width: 55%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.outer-wrapper .swiper-container .controls-container .swiper-button-prev,
+.outer-wrapper .swiper-container .controls-container .swiper-button-next {
+  color: rgba(9, 30, 66, 0.15);
+}
+
+/* === Add Custom Data Attributes In Markup and Slide Images Below === */
+[data-slide-1] {
+  background: url("../img/shasta_member_home_page_resized.jpg");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,14 +65,8 @@
   background-size: contain;
 }
 
-.outer-wrapper .swiper-container .swiper-wrapper .swiper-slide a {
-  display: block;
-  width: 55%;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.outer-wrapper .swiper-container .swiper-wrapper .swiper-text-overlay-container {
+[data-slide-2] {
+  background: url("../img/shasta_paperless_resized.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,23 +77,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 30vw;
-  padding: 0 10px;
-  margin-left: 24px;
-}
-
-.outer-wrapper .swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-text-overlay {
-  letter-spacing: 0;
-  line-height: 32px;
-  text-align: center;
-  color: #424242;
-}
-
-.outer-wrapper .swiper-container .controls-container .swiper-button-prev,
-.outer-wrapper .swiper-container .controls-container .swiper-button-next {
-  color: rgba(9, 30, 66, 0.15);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=shasta_mem_paperless_carousel_custom.css.map */
