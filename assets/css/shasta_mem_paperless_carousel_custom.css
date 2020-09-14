@@ -133,4 +133,18 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+@media all and (-ms-high-contrast: none) {
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-family: sans-serif !important;
+  }
+}
+
+/*For Edge*/
+@supports (-ms-ime-align: auto) {
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-family: sans-serif !important;
+    font-size: 24px !important;
+  }
+}
 /*# sourceMappingURL=shasta_mem_paperless_carousel_custom.css.map */
