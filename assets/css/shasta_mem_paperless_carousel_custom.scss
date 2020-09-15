@@ -1,15 +1,20 @@
-/* Resets */
+/* ===============
+   RESETS 
+   =============== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Mixins Import */
+/* ===============
+   MIXIN INCLUDES 
+   =============== */
 @import "./mixins";
 
-/* === CAROUSEL CODE BEGINS HERE === */
-
+/* ===============
+   CAROUSEL STYLES 
+   =============== */
 .outer-wrapper {
     display: flex;
     justify-content: center;
@@ -18,7 +23,8 @@
     margin: 0 auto;
 
     .controls-container {
-        /* Removes Arrow Controls on Mobile */
+
+        /* === Removes Arrow Controls on Mobile === */
         @include for-phone-only {
             display: none !important;
         }
@@ -35,6 +41,8 @@
         color: #ffffff;
         font-family: sans-serif;
         transform: scale(0.8);
+        position: relative !important;
+        top: -50px !important;
 
         @include for-phone-only {
             height: 65vh !important;
@@ -49,8 +57,10 @@
             height: 90vh !important;
         }
 
-        /* Repositions Pagination UI On Mobile */
+        /* === Repositions Pagination UI On Mobile === */
         .swiper-pagination {
+            width: 100% !important;
+
             @include for-phone-only {
                 bottom: -3px !important;
             }
@@ -61,11 +71,7 @@
 
             @include for-tablet-landscape-up {
                 bottom: 15px !important;
-                left: 315px !important;
-            }
 
-            @include for-desktop-up {
-                left: 360px !important;
             }
         }
 
@@ -76,8 +82,6 @@
             .swiper-slide-active {
                 width: 100% !important;
             }
-            
-            
 
             .swiper-slide {
 
@@ -90,7 +94,7 @@
             }
         }
 
-        
+
     }
 }
 
@@ -104,7 +108,8 @@
 }
 
 /* === Add Slide Data Attribute Here As Well === */
-[data-slide-1], [data-slide-2] {
+[data-slide-1],
+[data-slide-2] {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,17 +118,23 @@
     background-size: contain;
 }
 
-
-
+/* === For IE 11 - Swiper JS Icons Not Supported - Using Legacy CSS === */
 @media all and (-ms-high-contrast:none) {
-    .swiper-button-prev::after, .swiper-button-next::after {
-        font-family: sans-serif !important;
+
+    /* === Creates Spacing Between Bullets in IE11 === */
+    .swiper-pagination-bullet:last-child {
+        margin-left: 10px !important;
     }
+
+    /* === IE11 Specific Fix For Missing Nav Arrows === */
+    @include arrowFix;
+
+
 }
 
-/*For Edge*/
+/* === For Edge - Swiper JS Icons Not Supported - Using Legacy CSS === */
 @supports (-ms-ime-align:auto) {
-    .swiper-button-prev::after, .swiper-button-next::after {
-        font-family: sans-serif !important;
-    }
+
+    /* === Edge Specific Fix For Missing Nav Arrows === */
+    @include arrowFix;
 }
